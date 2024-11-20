@@ -34,13 +34,12 @@ def new_movies_eng():
         element = movie.text.strip()
         movies_list.append(element)
         
-    no = 1
 
     movies_zip = dict(zip(movies_list, ratings_list))
 
     for k, v in movies_zip.items():
-        print(f'{no}. {k} - {v}')
-        no += 1   
+        print(f'{k} - {v}')
+
 def new_movies_pl():
     url = 'https://www.filmweb.pl/ranking/premiere'
     print('Łączenie...')
@@ -72,13 +71,12 @@ def new_movies_pl():
         element = movie.text.strip()
         movies_list.append(element)
         
-    no = 1
 
     movies_zip = dict(zip(movies_list, ratings_list))
 
     for k, v in movies_zip.items():
-        print(f'{no}. {k} - {v}')
-        no += 1   
+        print(f'{k} - {v}')
+
 def polish_movies_pl():
     url = 'https://www.filmweb.pl/ranking/film/country/42'
     print('Łączenie...')
@@ -110,13 +108,13 @@ def polish_movies_pl():
         element = movie.text.strip()
         movies_list.append(element)
         
-    no = 1
+
 
     movies_zip = dict(zip(movies_list, ratings_list))
 
     for k, v in movies_zip.items():
-        print(f'{no}. {k} - {v}')
-        no += 1   
+        print(f'{k} - {v}')
+
 def polish_movies_eng():
     url = 'https://www.filmweb.pl/ranking/film/country/42'
     print('Connecting to the website...')
@@ -148,13 +146,12 @@ def polish_movies_eng():
         element = movie.text.strip()
         movies_list.append(element)
         
-    no = 1
 
     movies_zip = dict(zip(movies_list, ratings_list))
 
     for k, v in movies_zip.items():
-        print(f'{no}. {k} - {v}')
-        no += 1   
+        print(f'{k} - {v}')
+
 def most_awaited_eng():
     url = 'https://www.filmweb.pl/ranking/wantToSee/next12monthsWorld'
     print('Connecting to the website...')
@@ -179,10 +176,9 @@ def most_awaited_eng():
         element = movie.text.strip()
         movies_list.append(element)
     
-    nr = 1
     for i in movies_list:
         print(f'{nr}. {i}')
-        nr += 1
+
 def most_awaited_pl():
     url = 'https://www.filmweb.pl/ranking/wantToSee/next12monthsWorld'
     print('Łączenie...')
@@ -207,10 +203,8 @@ def most_awaited_pl():
         element = movie.text.strip()
         movies_list.append(element)
     
-    nr = 1
     for i in movies_list:
-        print(f'{nr}. {i}')
-        nr += 1
+        print(f'{i}')
 
 
 
